@@ -7,7 +7,7 @@
     <groupId>org.atlanmod.unveiling</groupId>
     <artifactId>unveiling-commons</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Unveiling Commons</name>
     <description>Parent POM for Unvailing Projects</description>
 
@@ -36,4 +36,15 @@
             <url>https://api.bintray.com/maven/atlanmod/unveiling/artifacts/;publish=1</url>
         </repository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>unveiling-bintray</id>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <name>Unveiling Artifacts</name>
+            <url>https://dl.bintray.com/atlanmod/unveiling</url>
+        </repository>
+    </repositories>
 </project>
