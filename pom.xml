@@ -9,12 +9,28 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Unveiling Commons</name>
-    <description>Parent POM for Unvailing Projects</description>
+    <description>
+        Parent POM for Unveiling Projects
+    </description>
+
+    <properties>
+        <emf.version/>
+        <eclipse.version/>
+        <maven.compiler.source/>
+        <maven.compiler.target/>
+    </properties>
 
     <modules>
         <module>unveiling-parent</module>
         <module>unveiling-p2-parent</module>
     </modules>
+
+    <licenses>
+        <license>
+            <name>EPL v2.0</name>
+            <url>https://www.eclipse.org/legal/epl-2.0/</url>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
@@ -47,4 +63,91 @@
             <url>https://dl.bintray.com/atlanmod/unveiling</url>
         </repository>
     </repositories>
+
+    <profiles>
+        <profile>
+            <id>emf-2.23</id>
+            <properties>
+                <emf.version>2.23.0</emf.version>
+                <eclipse.version>2020-12</eclipse.version>
+                <maven.compiler.source>11</maven.compiler.source>
+                <maven.compiler.target>11</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.22</id>
+            <properties>
+                <emf.version>2.22.0</emf.version>
+                <eclipse.version>2020-09</eclipse.version>
+                <maven.compiler.source>11</maven.compiler.source>
+                <maven.compiler.target>11</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.21</id>
+            <properties>
+                <emf.version>2.21.0</emf.version>
+                <eclipse.version>2020-06</eclipse.version>
+                <maven.compiler.source>11</maven.compiler.source>
+                <maven.compiler.target>11</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.20</id>
+            <properties>
+                <emf.version>2.20</emf.version>
+                <eclipse.version>2019-12</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.19</id>
+            <properties>
+                <emf.version>2.19.0</emf.version>
+                <eclipse.version>2019-09</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.18</id>
+            <properties>
+                <emf.version>2.18.0</emf.version>
+                <eclipse.version>2019-06</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.17</id>
+            <properties>
+                <emf.version>2.17.0</emf.version>
+                <eclipse.version>2019-03</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.16</id>
+            <properties>
+                <emf.version>2.16.0</emf.version>
+                <eclipse.version>2018-12</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>emf-2.15</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <emf.version>2.15.0</emf.version>
+                <eclipse.version>2018-09</eclipse.version>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+    </profiles>
 </project>
