@@ -7,7 +7,7 @@
     <groupId>org.atlanmod.unveiling</groupId>
     <artifactId>unveiling-commons</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>Unveiling Commons</name>
     <description>
         Parent POM for Unveiling Projects
@@ -18,6 +18,10 @@
         <eclipse.version/>
         <maven.compiler.source/>
         <maven.compiler.target/>
+		<jdk.version/>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
     </properties>
 
     <modules>
@@ -66,30 +70,35 @@
 
     <profiles>
         <profile>
+            <id>emf-2.24</id>
+            <properties>
+                <emf.version>2.24</emf.version>
+                <eclipse.version>2020-12</eclipse.version>
+                <jdk.version>11</jdk.version>
+            </properties>
+        </profile>
+        <profile>
             <id>emf-2.23</id>
             <properties>
-                <emf.version>2.23.0</emf.version>
-                <eclipse.version>2020-12</eclipse.version>
-                <maven.compiler.source>11</maven.compiler.source>
-                <maven.compiler.target>11</maven.compiler.target>
+                <emf.version>2.23</emf.version>
+                <eclipse.version>2020-09</eclipse.version>
+                <jdk.version>11</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.22</id>
             <properties>
-                <emf.version>2.22.0</emf.version>
-                <eclipse.version>2020-09</eclipse.version>
-                <maven.compiler.source>11</maven.compiler.source>
-                <maven.compiler.target>11</maven.compiler.target>
+                <emf.version>2.22</emf.version>
+                <eclipse.version>2020-06</eclipse.version>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.21</id>
             <properties>
-                <emf.version>2.21.0</emf.version>
-                <eclipse.version>2020-06</eclipse.version>
-                <maven.compiler.source>11</maven.compiler.source>
-                <maven.compiler.target>11</maven.compiler.target>
+                <emf.version>2.21</emf.version>
+                <eclipse.version>2020-03</eclipse.version>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
@@ -97,44 +106,39 @@
             <properties>
                 <emf.version>2.20</emf.version>
                 <eclipse.version>2019-12</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.19</id>
             <properties>
-                <emf.version>2.19.0</emf.version>
+                <emf.version>2.19</emf.version>
                 <eclipse.version>2019-09</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.18</id>
             <properties>
-                <emf.version>2.18.0</emf.version>
+                <emf.version>2.18</emf.version>
                 <eclipse.version>2019-06</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.17</id>
             <properties>
-                <emf.version>2.17.0</emf.version>
+                <emf.version>2.17</emf.version>
                 <eclipse.version>2019-03</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
             <id>emf-2.16</id>
             <properties>
-                <emf.version>2.16.0</emf.version>
+                <emf.version>2.16</emf.version>
                 <eclipse.version>2018-12</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
         <profile>
@@ -143,10 +147,9 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <emf.version>2.15.0</emf.version>
+                <emf.version>2.15</emf.version>
                 <eclipse.version>2018-09</eclipse.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
+                <jdk.version>8</jdk.version>
             </properties>
         </profile>
     </profiles>
