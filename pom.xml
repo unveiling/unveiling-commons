@@ -53,24 +53,16 @@
         <repository>
             <id>bintray</id>
             <name>Unveiling Commons</name>
-            <url>https://api.bintray.com/maven/atlanmod/unveiling/commons/;publish=1</url>
+            <url>https://api.bintray.com/maven/atlanmod/unveiling/unveiling-commons/;publish=1</url>
         </repository>
     </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>unveiling-bintray</id>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <name>Unveiling Artifacts</name>
-            <url>https://dl.bintray.com/atlanmod/unveiling</url>
-        </repository>
-    </repositories>
 
     <profiles>
         <profile>
             <id>emf-2.24</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <emf.version>2.24</emf.version>
                 <eclipse.version>2020-12</eclipse.version>
